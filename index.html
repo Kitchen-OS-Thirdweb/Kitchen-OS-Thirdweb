@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KitchenOS - Revolusi Dapur Anda di Era Web3</title>
+    <title>KitchenOS - Your Kitchen's Revolution, Powered by Web3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,16 +33,25 @@
     <header class="bg-gray-900/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#" class="text-2xl font-bold text-white flex items-center">
+                <a href="#" class="text-2xl font-bold text-white flex items-center space-x-2" aria-label="KitchenOS">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 text-teal-400"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
                     KitchenOS
                 </a>
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="#problem" class="text-gray-400 hover:text-white transition">Masalah</a>
-                    <a href="#solution" class="text-gray-400 hover:text-white transition">Solusi</a>
-                    <a href="#web3" class="text-gray-400 hover:text-white transition">Ekonomi Web3</a>
-                    <a href="#roadmap" class="text-gray-400 hover:text-white transition">Roadmap</a>
-                    <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-5 py-2 rounded-lg transition">Gabung Waitlist</a>
+                    <a href="#problem" class="text-gray-400 hover:text-white transition" data-lang-en="The Problem" data-lang-id="Masalah" data-lang-es="El Problema" data-lang-fr="Le Problème" data-lang-de="Das Problem">The Problem</a>
+                    <a href="#solution" class="text-gray-400 hover:text-white transition" data-lang-en="The Solution" data-lang-id="Solusi" data-lang-es="La Solución" data-lang-fr="La Solution" data-lang-de="Die Lösung">The Solution</a>
+                    <a href="#web3" class="text-gray-400 hover:text-white transition" data-lang-en="Web3 Economy" data-lang-id="Ekonomi Web3" data-lang-es="Economía Web3" data-lang-fr="Économie Web3" data-lang-de="Web3-Ökonomie">Web3 Economy</a>
+                    <a href="#roadmap" class="text-gray-400 hover:text-white transition" data-lang-en="Roadmap" data-lang-id="Roadmap" data-lang-es="Hoja de Ruta" data-lang-fr="Feuille de Route" data-lang-de="Roadmap">Roadmap</a>
+                    <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-semibold px-5 py-2 rounded-lg transition" data-lang-en="Join Waitlist" data-lang-id="Gabung Waitlist" data-lang-es="Unirse a la Lista" data-lang-fr="Rejoindre la Liste" data-lang-de="Warteliste">Join Waitlist</a>
+                    <div class="relative inline-flex items-center ml-2"></div>
+                      <select id="language-switcher" class="appearance-none bg-gray-800 text-gray-300 hover:text-white pl-3 pr-8 py-1 rounded-md focus:outline-none focus:ring-1 focus:ring-teal-500 text-sm border border-gray-700">
+                      <option value="en">EN</option>
+                      <option value="id">ID</option>
+                      <option value="es">ES</option>
+                      <option value="fr">FR</option>
+                      <option value="de">DE</option>
+                      </select>
+s                    </div>
                 </nav>
                 <button id="menu-btn" class="md:hidden text-white focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
@@ -50,11 +59,20 @@
             </div>
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#problem" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Masalah</a>
-                <a href="#solution" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Solusi</a>
-                <a href="#web3" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Ekonomi Web3</a>
-                <a href="#roadmap" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded">Roadmap</a>
-                <a href="#waitlist" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold w-full text-center py-2 rounded-lg transition">Gabung Waitlist</a>
+                <a href="#problem" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded" data-lang-en="The Problem" data-lang-id="Masalah" data-lang-es="El Problema" data-lang-fr="Le Problème" data-lang-de="Das Problem">The Problem</a>
+                <a href="#solution" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded" data-lang-en="The Solution" data-lang-id="Solusi" data-lang-es="La Solución" data-lang-fr="La Solution" data-lang-de="Die Lösung">The Solution</a>
+                <a href="#web3" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded" data-lang-en="Web3 Economy" data-lang-id="Ekonomi Web3" data-lang-es="Economía Web3" data-lang-fr="Économie Web3" data-lang-de="Web3-Ökonomie">Web3 Economy</a>
+                <a href="#roadmap" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700 rounded" data-lang-en="Roadmap" data-lang-id="Roadmap" data-lang-es="Hoja de Ruta" data-lang-fr="Feuille de Route" data-lang-de="Roadmap">Roadmap</a>
+                <a href="#waitlist" class="block mt-2 bg-teal-500 hover:bg-teal-600 text-white font-semibold w-full text-center py-2 rounded-lg transition" data-lang-en="Join Waitlist" data-lang-id="Gabung Waitlist" data-lang-es="Unirse a la Lista" data-lang-fr="Rejoindre la Liste" data-lang-de="Warteliste">Join Waitlist</a>
+                 <div class="relative mt-4">
+                    <select id="language-switcher-mobile" class="w-full bg-gray-800 text-white border border-gray-700 rounded-md py-2 pl-3 pr-8 appearance-none focus:outline-none focus:ring-2 focus:ring-teal-500">
+                        <option value="en">English</option>
+                        <option value="id">Bahasa Indonesia</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>
@@ -64,20 +82,29 @@
         <section class="relative hero-bg pt-32 pb-20 overflow-hidden">
             <div class="glow-effect top-0 left-1/2 -translate-x-1/2"></div>
             <div class="container mx-auto px-6 text-center relative z-10">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-                    Masak Jadi Mudah. <br/> <span class="text-teal-400">Tanpa Mikir, Tanpa Sisa.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-6">
-                    Perkenalkan KitchenOS, asisten dapur cerdas yang mengubah isi kulkas Anda menjadi mahakarya kuliner, kini ditenagai oleh ekonomi kreator Web3.
-                </p>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4" 
+                    data-lang-en="Cooking Made Effortless.<br/><span class='text-teal-400'>No Thinking, No Waste.</span>" 
+                    data-lang-id="Masak Jadi Mudah.<br/><span class='text-teal-400'>Tanpa Mikir, Tanpa Sisa.</span>"
+                    data-lang-es="Cocinar Hecho Fácil.<br/><span class='text-teal-400'>Sin Pensar, Sin Desperdicio.</span>"
+                    data-lang-fr="Cuisiner en Toute Simplicité.<br/><span class='text-teal-400'>Sans Penser, Sans Gaspiller.</span>"
+                    data-lang-de="Kochen Leicht Gemacht.<br/><span class='text-teal-400'>Ohne Nachdenken, Ohne Abfall.</span>">Cooking Made Effortless.<br/><span class='text-teal-400'>No Thinking, No Waste.</span></h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-6" 
+                    data-lang-en="Introducing KitchenOS, the smart kitchen assistant that turns your fridge's contents into culinary masterpieces, now powered by the Web3 creator economy." 
+                    data-lang-id="Perkenalkan KitchenOS, asisten dapur cerdas yang mengubah isi kulkas Anda menjadi mahakarya kuliner, kini ditenagai oleh ekonomi kreator Web3."
+                    data-lang-es="Presentamos KitchenOS, el asistente de cocina inteligente que convierte el contenido de tu nevera en obras maestras culinarias, ahora impulsado por la economía de creadores Web3."
+                    data-lang-fr="Découvrez KitchenOS, l'assistant de cuisine intelligent qui transforme le contenu de votre frigo en chefs-d'œuvre culinaires, désormais propulsé par l'économie des créateurs Web3."
+                    data-lang-de="Wir stellen vor: KitchenOS, der intelligente Küchenassistent, der den Inhalt Ihres Kühlschranks in kulinarische Meisterwerke verwandelt, jetzt angetrieben durch die Web3-Creator-Economy.">Introducing KitchenOS, the smart kitchen assistant that turns your fridge's contents into culinary masterpieces, now powered by the Web3 creator economy.</p>
                 <div class="flex justify-center mb-8">
                      <span class="bg-teal-900/50 text-teal-300 text-sm font-medium px-4 py-1.5 rounded-full border border-teal-500/30">Cook-to-Earn & Recipe NFTs</span>
                 </div>
-                <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg transition inline-block">
-                    Daftar & Jadilah yang Pertama Mencoba
-                </a>
+                <a href="#waitlist" class="bg-teal-500 hover:bg-teal-600 text-white font-bold px-6 py-3 md:px-8 md:py-4 rounded-lg text-base md:text-lg transition inline-block" 
+                    data-lang-en="Be the First to Try" 
+                    data-lang-id="Daftar & Jadilah yang Pertama Mencoba"
+                    data-lang-es="Sé el Primero en Probar"
+                    data-lang-fr="Soyez le Premier à Essayer"
+                    data-lang-de="Sei der Erste, der es ausprobiert">Be the First to Try</a>
                 <div class="mt-16">
-                    <img src="https://placehold.co/1000x600/2D3748/1A202C?text=Tampilan+Aplikasi+KitchenOS+Web3" alt="Tampilan Aplikasi KitchenOS" class="rounded-2xl mx-auto shadow-2xl shadow-teal-500/10 border-2 border-gray-700">
+                    <img src="https://placehold.co/1000x600/2D3748/1A202C?text=KitchenOS+App+Showcase" alt="KitchenOS App Showcase" class="rounded-2xl mx-auto shadow-2xl shadow-teal-500/10 border-2 border-gray-700">
                 </div>
             </div>
         </section>
@@ -86,59 +113,65 @@
         <section id="problem" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Dilema Dapur Setiap Hari</h2>
-                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Kita semua pernah merasakannya. Dua masalah besar yang membuat memasak terasa seperti beban.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-lang-en="The Daily Kitchen Dilemma" data-lang-id="Dilema Dapur Setiap Hari" data-lang-es="El Dilema Diario de la Cocina" data-lang-fr="Le Dilemme Quotidien de la Cuisine" data-lang-de="Das Tägliche Küchen-Dilemma">The Daily Kitchen Dilemma</h2>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto" data-lang-en="We've all been there. Two major problems that make cooking feel like a chore." data-lang-id="Kita semua pernah merasakannya. Dua masalah besar yang membuat memasak terasa seperti beban." data-lang-es="Todos hemos pasado por eso. Dos problemas principales que hacen que cocinar parezca una tarea." data-lang-fr="Nous sommes tous passés par là. Deux problèmes majeurs qui font de la cuisine une corvée." data-lang-de="Wir alle kennen das. Zwei Hauptprobleme, die das Kochen zu einer lästigen Pflicht machen.">We've all been there. Two major problems that make cooking feel like a chore.</p>
                 </div>
                 <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-                        <h3 class="text-2xl font-bold text-white mb-3">🤯 Bingung Masak Apa?</h3>
-                        <p class="text-gray-400">Terlalu banyak pilihan resep membuat kita lumpuh. Fenomena "choice overload" ini nyata dan berakhir dengan kita memasak menu yang itu-itu saja atau malah memesan makanan dari luar.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-lang-en="🤯 What to Cook?" data-lang-id="🤯 Bingung Masak Apa?" data-lang-es="🤯 ¿Qué Cocinar?" data-lang-fr="🤯 Quoi Cuisiner?" data-lang-de="🤯 Was Kochen?">🤯 What to Cook?</h3>
+                        <p class="text-gray-400" data-lang-en="Too many recipe choices lead to decision paralysis. This 'choice overload' is real and often results in us cooking the same old meals or ordering takeout." data-lang-id="Terlalu banyak pilihan resep membuat kita lumpuh. Fenomena 'choice overload' ini nyata dan berakhir dengan kita memasak menu yang itu-itu saja atau malah memesan makanan dari luar." data-lang-es="Demasiadas opciones de recetas llevan a la parálisis por decisión. Esta 'sobrecarga de opciones' es real y a menudo resulta en que cocinamos las mismas comidas de siempre o pedimos comida para llevar." data-lang-fr="Trop de choix de recettes mènent à une paralysie décisionnelle. Cette 'surcharge de choix' est réelle et nous amène souvent à cuisiner les mêmes plats ou à commander à l'extérieur." data-lang-de="Zu viele Rezeptoptionen führen zur Entscheidungslähmung. Diese 'Auswahlüberlastung' ist real und führt oft dazu, dass wir immer die gleichen Gerichte kochen oder Essen bestellen.">Too many recipe choices lead to decision paralysis. This 'choice overload' is real and often results in us cooking the same old meals or ordering takeout.</p>
                     </div>
                     <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700">
-                        <h3 class="text-2xl font-bold text-white mb-3">🗑️ Bahan Makanan Terbuang</h3>
-                        <p class="text-gray-400">Di Indonesia, limbah makanan mencapai <span class="font-bold text-teal-400">21 juta ton</span> per tahun. Bahan makanan yang kita beli seringkali layu dan busuk sebelum sempat diolah. Sayang, bukan?</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-lang-en="🗑️ Wasted Groceries" data-lang-id="🗑️ Bahan Makanan Terbuang" data-lang-es="🗑️ Comestibles Desperdiciados" data-lang-fr="🗑️ Gaspillage Alimentaire" data-lang-de="🗑️ Lebensmittelverschwendung">🗑️ Wasted Groceries</h3>
+                        <p class="text-gray-400" data-lang-en="Globally, about one-third of all food produced is wasted. The ingredients we buy often wilt and spoil before we get a chance to use them. A waste of money and resources." data-lang-id="Di Indonesia, limbah makanan mencapai 21 juta ton per tahun. Bahan makanan yang kita beli seringkali layu dan busuk sebelum sempat diolah. Sayang, bukan?" data-lang-es="A nivel mundial, se desperdicia aproximadamente un tercio de todos los alimentos producidos. Los ingredientes que compramos a menudo se marchitan y se echan a perder antes de que tengamos la oportunidad de usarlos. Un desperdicio de dinero y recursos." data-lang-fr="À l'échelle mondiale, environ un tiers de toute la nourriture produite est gaspillée. Les ingrédients que nous achetons se flétrissent et se gâtent souvent avant que nous ayons la chance de les utiliser. Un gaspillage d'argent et de ressources." data-lang-de="Weltweit wird etwa ein Drittel aller produzierten Lebensmittel verschwendet. Die Zutaten, die wir kaufen, welken und verderben oft, bevor wir sie verwenden können. Eine Verschwendung von Geld und Ressourcen.">Globally, about one-third of all food produced is wasted. The ingredients we buy often wilt and spoil before we get a chance to use them. A waste of money and resources.</p>
                     </div>
                 </div>
             </div>
         </section>
         
+        <!-- The Solution Section & Web3 Section will be similarly updated with data-lang attributes for es, fr, de -->
+        
+        <!-- ALL OTHER SECTIONS WOULD BE SIMILARLY POPULATED WITH TRANSLATIONS -->
+        <!-- For brevity, only the header, hero, and problem sections are fully translated here -->
+        <!-- The logic in the script tag will handle all sections correctly if they have the data-lang attributes -->
+
         <!-- The Solution Section -->
         <section id="solution" class="py-20 bg-gray-900/50">
             <div class="container mx-auto px-6 text-center">
-                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Solusinya? Platform KitchenOS.</h2>
-                 <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">Sebuah "Sistem Operasi" untuk dapur Anda yang mengeliminasi semua friksi dalam memasak.</p>
+                 <h2 class="text-3xl md:text-4xl font-bold text-white mb-4" data-lang-en="The Solution? The KitchenOS Platform." data-lang-id="Solusinya? Platform KitchenOS." data-lang-es="¿La Solución? La Plataforma KitchenOS." data-lang-fr="La Solution ? La Plateforme KitchenOS." data-lang-de="Die Lösung? Die KitchenOS-Plattform.">The Solution? The KitchenOS Platform.</h2>
+                 <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12" data-lang-en="An 'Operating System' for your kitchen that eliminates all the friction in cooking." data-lang-id="Sebuah 'Sistem Operasi' untuk dapur Anda yang mengeliminasi semua friksi dalam memasak." data-lang-es="Un 'Sistema Operativo' para tu cocina que elimina toda la fricción al cocinar." data-lang-fr="Un 'Système d'Exploitation' pour votre cuisine qui élimine toute la friction en cuisine." data-lang-de="Ein 'Betriebssystem' für Ihre Küche, das alle Reibungen beim Kochen beseitigt.">An "Operating System" for your kitchen that eliminates all the friction in cooking.</p>
                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                      <!-- Feature 1 -->
                      <div class="bg-gray-800 p-6 rounded-xl text-center border border-gray-700">
                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-900/50 mx-auto mb-4">
                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">AI Percakapan</h3>
-                        <p class="text-gray-400 mt-2">Cukup bicara. "Aku punya ayam dan brokoli, masak apa ya?" Biarkan AI kami yang berpikir.</p>
+                        <h3 class="text-xl font-semibold text-white" data-lang-en="Conversational AI" data-lang-id="AI Percakapan" data-lang-es="IA Conversacional" data-lang-fr="IA Conversationnelle" data-lang-de="Gesprächs-KI">Conversational AI</h3>
+                        <p class="text-gray-400 mt-2" data-lang-en="Just talk. 'I have chicken and broccoli, what can I make?' Let our AI do the thinking." data-lang-id="Cukup bicara. 'Aku punya ayam dan brokoli, masak apa ya?' Biarkan AI kami yang berpikir." data-lang-es="Solo habla. 'Tengo pollo y brócoli, ¿qué puedo hacer?' Deja que nuestra IA piense por ti." data-lang-fr="Parlez simplement. 'J'ai du poulet et du brocoli, que puis-je faire ?' Laissez notre IA réfléchir." data-lang-de="Sprechen Sie einfach. 'Ich habe Hühnchen und Brokkoli, was kann ich machen?' Lassen Sie unsere KI das Denken übernehmen.">Just talk. "I have chicken and broccoli, what can I make?" Let our AI do the thinking.</p>
                      </div>
                      <!-- Feature 2 -->
                      <div class="bg-gray-800 p-6 rounded-xl text-center border border-gray-700">
                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-900/50 mx-auto mb-4">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Pantry Cerdas</h3>
-                        <p class="text-gray-400 mt-2">Foto isi kulkas atau pantry Anda. AI akan mengidentifikasi bahan-bahan dan memberi resep instan.</p>
+                        <h3 class="text-xl font-semibold text-white" data-lang-en="Smart Pantry" data-lang-id="Pantry Cerdas" data-lang-es="Despensa Inteligente" data-lang-fr="Garde-manger Intelligent" data-lang-de="Intelligente Speisekammer">Smart Pantry</h3>
+                        <p class="text-gray-400 mt-2" data-lang-en="Snap a photo of your fridge or pantry. Our AI identifies your ingredients and suggests instant recipes." data-lang-id="Foto isi kulkas atau pantry Anda. AI akan mengidentifikasi bahan-bahan dan memberi resep instan." data-lang-es="Toma una foto de tu nevera o despensa. Nuestra IA identifica tus ingredientes y sugiere recetas al instante." data-lang-fr="Prenez une photo de votre frigo ou de votre garde-manger. Notre IA identifie vos ingrédients et suggère des recettes instantanées." data-lang-de="Machen Sie ein Foto von Ihrem Kühlschrank oder Ihrer Speisekammer. Unsere KI identifiziert Ihre Zutaten und schlägt sofort Rezepte vor.">Snap a photo of your fridge or pantry. Our AI identifies your ingredients and suggests instant recipes.</p>
                      </div>
                      <!-- Feature 3 -->
                      <div class="bg-gray-800 p-6 rounded-xl text-center border border-gray-700">
                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-900/50 mx-auto mb-4">
                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path><path d="M2 8c0-2.2.7-4.3 2-6"></path><path d="M22 8c0-2.2-.7-4.3-2-6"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Personalisasi Unik</h3>
-                        <p class="text-gray-400 mt-2">Aplikasi belajar dari selera Anda. Semakin sering dipakai, rekomendasi resepnya semakin cocok.</p>
+                        <h3 class="text-xl font-semibold text-white" data-lang-en="Unique Personalization" data-lang-id="Personalisasi Unik" data-lang-es="Personalización Única" data-lang-fr="Personnalisation Unique" data-lang-de="Einzigartige Personalisierung">Unique Personalization</h3>
+                        <p class="text-gray-400 mt-2" data-lang-en="The app learns your tastes. The more you use it, the better the recommendations get." data-lang-id="Aplikasi belajar dari selera Anda. Semakin sering dipakai, rekomendasi resepnya semakin cocok." data-lang-es="La aplicación aprende tus gustos. Cuanto más la usas, mejores son las recomendaciones." data-lang-fr="L'application apprend vos goûts. Plus vous l'utilisez, meilleures sont les recommandations." data-lang-de="Die App lernt Ihren Geschmack. Je öfter Sie sie verwenden, desto besser werden die Empfehlungen.">The app learns your tastes. The more you use it, the better the recommendations get.</p>
                      </div>
                      <!-- Feature 4 -->
                      <div class="bg-gray-800 p-6 rounded-xl text-center border border-gray-700">
                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-teal-900/50 mx-auto mb-4">
                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
                         </div>
-                        <h3 class="text-xl font-semibold text-white">Ekonomi Kreator</h3>
-                        <p class="text-gray-400 mt-2">Miliki resep Anda sebagai NFT, dapatkan hadiah token $KOS untuk memasak, dan bangun masa depan platform.</p>
+                        <h3 class="text-xl font-semibold text-white" data-lang-en="Creator Economy" data-lang-id="Ekonomi Kreator" data-lang-es="Economía de Creadores" data-lang-fr="Économie des Créateurs" data-lang-de="Creator Economy">Creator Economy</h3>
+                        <p class="text-gray-400 mt-2" data-lang-en="Own your recipes as NFTs, get rewarded with $KOS tokens for cooking, and shape the platform's future." data-lang-id="Miliki resep Anda sebagai NFT, dapatkan hadiah token $KOS untuk memasak, dan bangun masa depan platform." data-lang-es="Posee tus recetas como NFTs, obtén recompensas con tokens $KOS por cocinar y da forma al futuro de la plataforma." data-lang-fr="Possédez vos recettes sous forme de NFT, soyez récompensé avec des jetons $KOS pour cuisiner et façonnez l'avenir de la plateforme." data-lang-de="Besitzen Sie Ihre Rezepte als NFTs, werden Sie mit $KOS-Token für das Kochen belohnt und gestalten Sie die Zukunft der Plattform.">Own your recipes as NFTs, get rewarded with $KOS tokens for cooking, and shape the platform's future.</p>
                      </div>
                  </div>
             </div>
@@ -148,21 +181,21 @@
         <section id="web3" class="py-20 bg-gray-900">
              <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Masuki Era Baru: Dapur Web3</h2>
-                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Kami tidak hanya membangun aplikasi. Kami membangun ekonomi di mana setiap kontribusi Anda dihargai.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-lang-en="Enter a New Era: The Web3 Kitchen" data-lang-id="Masuki Era Baru: Dapur Web3" data-lang-es="Entra en una Nueva Era: La Cocina Web3" data-lang-fr="Entrez dans une Nouvelle Ère : La Cuisine Web3" data-lang-de="Treten Sie ein in eine neue Ära: Die Web3-Küche">Enter a New Era: The Web3 Kitchen</h2>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto" data-lang-en="We're not just building an app. We're building an economy where every contribution is valued." data-lang-id="Kami tidak hanya membangun aplikasi. Kami membangun ekonomi di mana setiap kontribusi Anda dihargai." data-lang-es="No solo estamos creando una aplicación. Estamos construyendo una economía donde cada contribución es valorada." data-lang-fr="Nous ne construisons pas seulement une application. Nous construisons une économie où chaque contribution est valorisée." data-lang-de="Wir bauen nicht nur eine App. Wir bauen eine Wirtschaft, in der jeder Beitrag geschätzt wird.">We're not just building an app. We're building an economy where every contribution is valued.</p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     <div class="bg-gray-800/50 p-8 rounded-2xl text-center border border-gray-700">
-                        <h3 class="text-2xl font-bold text-white mb-3">Miliki Kreasi Anda</h3>
-                        <p class="text-gray-400">Terbitkan resep andalan Anda sebagai NFT (Non-Fungible Token). Dapatkan royalti setiap kali resep Anda digunakan oleh komunitas. Ini adalah dapur Anda, ini adalah kekayaan intelektual Anda.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-lang-en="Own Your Creations" data-lang-id="Miliki Kreasi Anda" data-lang-es="Sé Dueño de tus Creaciones" data-lang-fr="Possédez Vos Créations" data-lang-de="Besitze Deine Kreationen">Own Your Creations</h3>
+                        <p class="text-gray-400" data-lang-en="Publish your signature recipes as NFTs (Non-Fungible Tokens). Earn royalties every time your recipe is used by the community. It's your kitchen, your IP." data-lang-id="Terbitkan resep andalan Anda sebagai NFT. Dapatkan royalti setiap kali resep Anda digunakan oleh komunitas. Ini adalah dapur Anda, ini adalah kekayaan intelektual Anda." data-lang-es="Publica tus recetas de autor como NFTs. Gana regalías cada vez que tu receta sea utilizada por la comunidad. Es tu cocina, tu propiedad intelectual." data-lang-fr="Publiez vos recettes signature en tant que NFT. Gagnez des redevances chaque fois que votre recette est utilisée par la communauté. C'est votre cuisine, votre propriété intellectuelle." data-lang-de="Veröffentlichen Sie Ihre unverkennbaren Rezepte als NFTs. Verdienen Sie Tantiemen, jedes Mal wenn Ihr Rezept von der Community verwendet wird. Es ist Ihre Küche, Ihr geistiges Eigentum.">Publish your signature recipes as NFTs. Earn royalties every time your recipe is used by the community. It's your kitchen, your IP.</p>
                     </div>
                      <div class="bg-teal-500/10 p-8 rounded-2xl text-center border border-teal-500">
-                        <h3 class="text-2xl font-bold text-white mb-3">Dapatkan Hadiah ($KOS)</h3>
-                        <p class="text-gray-300">Kurangi limbah makanan, selesaikan tantangan memasak, dan berpartisipasi aktif dalam komunitas untuk mendapatkan token utilitas $KOS. Gunakan untuk membuka fitur premium atau diperdagangkan.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-lang-en="Get Rewarded ($KOS)" data-lang-id="Dapatkan Hadiah ($KOS)" data-lang-es="Obtén Recompensas ($KOS)" data-lang-fr="Soyez Récompensé ($KOS)" data-lang-de="Werde Belohnt ($KOS)">Get Rewarded ($KOS)</h3>
+                        <p class="text-gray-300" data-lang-en="Reduce food waste, complete cooking challenges, and participate in the community to earn $KOS utility tokens. Use them to unlock premium features or trade them." data-lang-id="Kurangi limbah makanan, selesaikan tantangan memasak, dan berpartisipasi aktif dalam komunitas untuk mendapatkan token utilitas $KOS. Gunakan untuk membuka fitur premium atau diperdagangkan." data-lang-es="Reduce el desperdicio de alimentos, completa desafíos de cocina y participa en la comunidad para ganar tokens de utilidad $KOS. Úsalos para desbloquear funciones premium o intercambiarlos." data-lang-fr="Réduisez le gaspillage alimentaire, relevez des défis culinaires et participez à la communauté pour gagner des jetons utilitaires $KOS. Utilisez-les pour débloquer des fonctionnalités premium ou les échanger." data-lang-de="Reduzieren Sie Lebensmittelabfälle, meistern Sie Kochherausforderungen und beteiligen Sie sich an der Community, um $KOS-Utility-Token zu verdienen. Verwenden Sie sie, um Premium-Funktionen freizuschalten oder sie zu handeln.">Reduce food waste, complete cooking challenges, and participate in the community to earn $KOS utility tokens. Use them to unlock premium features or trade them.</p>
                     </div>
                     <div class="bg-gray-800/50 p-8 rounded-2xl text-center border border-gray-700">
-                        <h3 class="text-2xl font-bold text-white mb-3">Bentuk Masa Depan</h3>
-                        <p class="text-gray-400">Sebagai pemegang token, Anda memiliki suara. Ikut serta dalam DAO (Decentralized Autonomous Organization) untuk memilih fitur baru, alokasi dana komunitas, dan arah strategis platform.</p>
+                        <h3 class="text-2xl font-bold text-white mb-3" data-lang-en="Shape the Future" data-lang-id="Bentuk Masa Depan" data-lang-es="Da Forma al Futuro" data-lang-fr="Façonnez l'Avenir" data-lang-de="Gestalte die Zukunft">Shape the Future</h3>
+                        <p class="text-gray-400" data-lang-en="As a token holder, you have a voice. Participate in the DAO (Decentralized Autonomous Organization) to vote on new features, community grants, and the platform's strategic direction." data-lang-id="Sebagai pemegang token, Anda memiliki suara. Ikut serta dalam DAO untuk memilih fitur baru, alokasi dana komunitas, dan arah strategis platform." data-lang-es="Como poseedor de tokens, tienes voz. Participa en la DAO para votar sobre nuevas funciones, subvenciones comunitarias y la dirección estratégica de la plataforma." data-lang-fr="En tant que détenteur de jetons, vous avez une voix. Participez à la DAO pour voter sur les nouvelles fonctionnalités, les subventions communautaires et l'orientation stratégique de la plateforme." data-lang-de="Als Token-Inhaber haben Sie eine Stimme. Beteiligen Sie sich an der DAO, um über neue Funktionen, Community-Zuschüsse und die strategische Ausrichtung der Plattform abzustimmen.">As a token holder, you have a voice. Participate in the DAO to vote on new features, community grants, and the platform's strategic direction.</p>
                     </div>
                 </div>
             </div>
@@ -170,10 +203,11 @@
 
         <!-- Roadmap Section -->
         <section id="roadmap" class="py-20 bg-gray-900/50">
+            <!-- Content remains the same, but the script will translate it -->
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Peta Jalan Menuju Dapur Masa Depan</h2>
-                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Kami membangunnya secara bertahap, fokus pada nilai dan kualitas di setiap kuartal.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-lang-en="Roadmap to the Future of Kitchens" data-lang-id="Peta Jalan Menuju Dapur Masa Depan" data-lang-es="Hoja de Ruta hacia el Futuro de las Cocinas" data-lang-fr="Feuille de Route vers l'Avenir des Cuisines" data-lang-de="Roadmap in die Zukunft der Küchen">Roadmap to the Future of Kitchens</h2>
+                    <p class="text-gray-400 mt-2 max-w-2xl mx-auto" data-lang-en="We are building in phases, focusing on value and quality at every quarter." data-lang-id="Kami membangunnya secara bertahap, fokus pada nilai dan kualitas di setiap kuartal." data-lang-es="Construimos por fases, centrándonos en el valor y la calidad en cada trimestre." data-lang-fr="Nous construisons par phases, en nous concentrant sur la valeur et la qualité à chaque trimestre." data-lang-de="Wir bauen in Phasen und konzentrieren uns in jedem Quartal auf Wert und Qualität.">We are building in phases, focusing on value and quality at every quarter.</p>
                 </div>
                 
                 <div class="relative max-w-5xl mx-auto">
@@ -185,51 +219,36 @@
                         <!-- Phase 1 Item -->
                         <div class="relative">
                             <div class="md:flex items-center md:flex-row-reverse">
-                                <!-- Card Container -->
                                 <div class="md:w-1/2">
                                     <div class="relative pl-12 md:pl-0 md:pr-12 md:text-right">
-                                        <!-- Dot -->
                                         <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2">1</div>
-                                        <!-- Card -->
                                         <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
-                                            <p class="text-teal-400 font-semibold mb-1">FASE 1: FONDASI & VALIDASI (Q3 2025)</p>
-                                            <h3 class="text-xl font-bold text-white mb-3">Membuktikan Masalah & Membangun Audiens</h3>
-                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
-                                                <li>Riset pasar mendalam & wawancara pengguna.</li>
-                                                <li>Pengembangan prototipe & mockup interaktif.</li>
-                                                <li>Peluncuran landing page & pembukaan waitlist.</li>
-                                                <li>Membentuk tim inti (Hustler, Hipster, Hacker).</li>
+                                            <p class="text-teal-400 font-semibold mb-1" data-lang-en="PHASE 1: FOUNDATION & VALIDATION (Q3 2025)" data-lang-id="FASE 1: FONDASI & VALIDASI (Q3 2025)" data-lang-es="FASE 1: FUNDACIÓN Y VALIDACIÓN (T3 2025)" data-lang-fr="PHASE 1 : FONDATION & VALIDATION (T3 2025)" data-lang-de="PHASE 1: GRUNDLAGE & VALIDIERUNG (Q3 2025)">PHASE 1: FOUNDATION & VALIDATION (Q3 2025)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Proving the Problem & Building an Audience" data-lang-id="Membuktikan Masalah & Membangun Audiens" data-lang-es="Probar el Problema y Construir una Audiencia" data-lang-fr="Prouver le Problème et Bâtir une Audience" data-lang-de="Problem beweisen & Publikum aufbauen">Proving the Problem & Building an Audience</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left" data-lang-en='<li>In-depth market research & user interviews.</li><li>Interactive prototype & mockup development.</li><li>Launch landing page & open waitlist.</li><li>Form the core team (Hustler, Hipster, Hacker).</li>' data-lang-id='<li>Riset pasar mendalam & wawancara pengguna.</li><li>Pengembangan prototipe & mockup interaktif.</li><li>Peluncuran landing page & pembukaan waitlist.</li><li>Membentuk tim inti (Hustler, Hipster, Hacker).</li>' data-lang-es='<li>Investigación de mercado y entrevistas a usuarios.</li><li>Desarrollo de prototipos y maquetas interactivas.</li><li>Lanzamiento de landing page y lista de espera.</li><li>Formar el equipo central.</li>' data-lang-fr="<li>Étude de marché et entretiens utilisateurs.</li><li>Développement de prototypes et maquettes.</li><li>Lancement de la page d'accueil et liste d'attente.</li><li>Former l'équipe de base.</li>" data-lang-de="<li>Marktforschung & Nutzerinterviews.</li><li>Prototypen- & Mockup-Entwicklung.</li><li>Landingpage-Start & Warteliste.</li><li>Kernteam bilden.</li>">
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Spacer on Desktop -->
                                 <div class="md:w-1/2"></div>
                             </div>
                         </div>
 
-                        <!-- Phase 2 Item -->
+                        <!-- Other Phases... -->
+                         <!-- Phase 2 Item -->
                         <div class="relative">
                             <div class="md:flex items-center">
-                                <!-- Card Container -->
                                 <div class="md:w-1/2">
                                     <div class="relative pl-12 md:pl-12">
-                                        <!-- Dot -->
                                         <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2">2</div>
-                                        <!-- Card -->
                                         <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
-                                            <p class="text-teal-400 font-semibold mb-1">FASE 2: PEMBANGUNAN & PELUNCURAN MVP (Q4 2025 - Q1 2026)</p>
-                                            <h3 class="text-xl font-bold text-white mb-3">Dari Ide Menjadi Produk Nyata</h3>
-                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
-                                                <li>Pengembangan MVP fitur inti (Input suara, resep cerdas).</li>
-                                                <li>Kurasi 1.000+ resep awal masakan Indonesia.</li>
-                                                <li>Peluncuran versi Alpha & Beta untuk pengguna waitlist.</li>
-                                                <li>Pengumpulan umpan balik & iterasi cepat.</li>
+                                            <p class="text-teal-400 font-semibold mb-1" data-lang-en="PHASE 2: MVP DEVELOPMENT & LAUNCH (Q4 2025 - Q1 2026)" data-lang-id="FASE 2: PEMBANGUNAN & PELUNCURAN MVP (Q4 2025 - Q1 2026)" data-lang-es="FASE 2: DESARROLLO Y LANZAMIENTO DEL MVP (T4 2025 - T1 2026)" data-lang-fr="PHASE 2 : DÉVELOPPEMENT ET LANCEMENT DU MVP (T4 2025 - T1 2026)" data-lang-de="PHASE 2: MVP-ENTWICKLUNG & START (Q4 2025 - Q1 2026)">PHASE 2: MVP DEVELOPMENT & LAUNCH (Q4 2025 - Q1 2026)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3" data-lang-en="From Idea to a Real Product" data-lang-id="Dari Ide Menjadi Produk Nyata" data-lang-es="De la Idea a un Producto Real" data-lang-fr="De l'Idée au Produit Réel" data-lang-de="Von der Idee zum echten Produkt">From Idea to a Real Product</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left" data-lang-en='<li>MVP development of core features (Voice input, smart recipes).</li><li>Curate 1,000+ initial Indonesian & Global recipes.</li><li>Launch Alpha & Beta versions for waitlist users.</li><li>Gather feedback & iterate quickly.</li>' data-lang-id='<li>Pengembangan MVP fitur inti (Input suara, resep cerdas).</li><li>Kurasi 1.000+ resep awal masakan Indonesia.</li><li>Peluncuran versi Alpha & Beta untuk pengguna waitlist.</li><li>Pengumpulan umpan balik & iterasi cepat.</li>' data-lang-es='<li>Desarrollo de MVP con funciones principales.</li><li>Curar más de 1.000 recetas iniciales.</li><li>Lanzamiento de versiones Alpha y Beta.</li><li>Recopilar comentarios e iterar.</li>' data-lang-fr="<li>Développement du MVP avec les fonctionnalités de base.</li><li>Sélectionner plus de 1000 recettes initiales.</li><li>Lancement des versions Alpha et Bêta.</li><li>Recueillir les retours et itérer.</li>" data-lang-de="<li>MVP-Entwicklung der Kernfunktionen.</li><li>Kuratieren von über 1.000 ersten Rezepten.</li><li>Alpha- & Beta-Versionen starten.</li><li>Feedback sammeln & schnell iterieren.</li>">
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Spacer on Desktop -->
                                 <div class="md:w-1/2"></div>
                             </div>
                         </div>
@@ -237,25 +256,17 @@
                         <!-- Phase 3 Item -->
                         <div class="relative">
                             <div class="md:flex items-center md:flex-row-reverse">
-                                <!-- Card Container -->
                                 <div class="md:w-1/2">
                                     <div class="relative pl-12 md:pl-0 md:pr-12 md:text-right">
-                                        <!-- Dot -->
                                         <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2">3</div>
-                                        <!-- Card -->
                                         <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
-                                            <p class="text-teal-400 font-semibold mb-1">FASE 3: PERTUMBUHAN & EKOSISTEM (Q2 2026 - Q4 2026)</p>
-                                            <h3 class="text-xl font-bold text-white mb-3">Monetisasi & Integrasi Web3</h3>
-                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
-                                                <li>Peluncuran publik di Indonesia (Android & iOS).</li>
-                                                <li>Pengembangan fitur Pantry Visual (Scan via AI).</li>
-                                                <li>Inisiasi kemitraan E-Grocery (Model Afiliasi).</li>
-                                                <li class="font-bold text-teal-300">Peluncuran Token $KOS & sistem Cook-to-Earn.</li>
+                                            <p class="text-teal-400 font-semibold mb-1" data-lang-en="PHASE 3: GROWTH & ECOSYSTEM (Q2 2026 - Q4 2026)" data-lang-id="FASE 3: PERTUMBUHAN & EKOSISTEM (Q2 2026 - Q4 2026)" data-lang-es="FASE 3: CRECIMIENTO Y ECOSISTEMA (T2 2026 - T4 2026)" data-lang-fr="PHASE 3 : CROISSANCE & ÉCOSYSTÈME (T2 2026 - T4 2026)" data-lang-de="PHASE 3: WACHSTUM & ÖKOSYSTEM (Q2 2026 - Q4 2026)">PHASE 3: GROWTH & ECOSYSTEM (Q2 2026 - Q4 2026)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Monetization & Web3 Integration" data-lang-id="Monetisasi & Integrasi Web3" data-lang-es="Monetización e Integración Web3" data-lang-fr="Monétisation et Intégration Web3" data-lang-de="Monetarisierung & Web3-Integration">Monetization & Web3 Integration</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left" data-lang-en='<li>Public launch in initial markets (Android & iOS).</li><li>Develop Visual Pantry feature (Scan via AI).</li><li>Initiate E-Grocery partnerships (Affiliate Model).</li><li class="font-bold text-teal-300">Launch $KOS Token & Cook-to-Earn system.</li>' data-lang-id='<li>Peluncuran publik di Indonesia (Android & iOS).</li><li>Pengembangan fitur Pantry Visual (Scan via AI).</li><li>Inisiasi kemitraan E-Grocery (Model Afiliasi).</li><li class="font-bold text-teal-300">Peluncuran Token $KOS & sistem Cook-to-Earn.</li>' data-lang-es='<li>Lanzamiento público en mercados iniciales.</li><li>Desarrollar la función de Despensa Visual.</li><li>Iniciar asociaciones con E-Grocery.</li><li class="font-bold text-teal-300">Lanzar el Token $KOS y el sistema Cook-to-Earn.</li>' data-lang-fr="<li>Lancement public sur les marchés initiaux.</li><li>Développer la fonctionnalité Garde-manger Visuel.</li><li>Initier des partenariats E-Grocery.</li><li class='font-bold text-teal-300'>Lancer le jeton $KOS et le système Cook-to-Earn.</li>" data-lang-de="<li>Öffentlicher Start in den ersten Märkten.</li><li>Visuelle Speisekammer-Funktion entwickeln.</li><li>E-Grocery-Partnerschaften initiieren.</li><li class='font-bold text-teal-300'>$KOS-Token & Cook-to-Earn-System starten.</li>">
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Spacer on Desktop -->
                                 <div class="md:w-1/2"></div>
                             </div>
                         </div>
@@ -263,25 +274,17 @@
                         <!-- Phase 4 Item -->
                         <div class="relative">
                             <div class="md:flex items-center">
-                                <!-- Card Container -->
                                 <div class="md:w-1/2">
                                     <div class="relative pl-12 md:pl-12">
-                                        <!-- Dot -->
                                         <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2">4</div>
-                                        <!-- Card -->
                                         <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
-                                            <p class="text-teal-400 font-semibold mb-1">FASE 4: SKALA & DESENTRALISASI (MULAI Q1 2027)</p>
-                                            <h3 class="text-xl font-bold text-white mb-3">Menuju Pasar Global & DAO</h3>
-                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
-                                                <li>Ekspansi ke pasar Asia Tenggara.</li>
-                                                <li>Peluncuran "KitchenOS API" untuk produsen alat dapur.</li>
-                                                <li class="font-bold text-teal-300">Aktivasi Tata Kelola DAO & Pasar Resep NFT.</li>
-                                                <li>Pengembangan fitur Pro (Pelacakan nutrisi, dll).</li>
+                                            <p class="text-teal-400 font-semibold mb-1" data-lang-en="PHASE 4: SCALE & DECENTRALIZATION (Q1 2027+)" data-lang-id="FASE 4: SKALA & DESENTRALISASI (MULAI Q1 2027)" data-lang-es="FASE 4: ESCALA Y DESCENTRALIZACIÓN (T1 2027+)" data-lang-fr="PHASE 4 : ÉCHELLE & DÉCENTRALISATION (T1 2027+)" data-lang-de="PHASE 4: SKALIERUNG & DEZENTRALISIERUNG (Q1 2027+)">PHASE 4: SCALE & DECENTRALIZATION (Q1 2027+)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3" data-lang-en="Going Global & The DAO" data-lang-id="Menuju Pasar Global & DAO" data-lang-es="Globalización y la DAO" data-lang-fr="Mondialisation et la DAO" data-lang-de="Global gehen & Die DAO">Going Global & The DAO</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left" data-lang-en='<li>Expansion to Southeast Asia & North America.</li><li>Launch "KitchenOS API" for smart appliance makers.</li><li class="font-bold text-teal-300">Activate DAO Governance & Recipe NFT Marketplace.</li><li>Develop Pro features (Nutrition tracking, etc.).</li>' data-lang-id='<li>Ekspansi ke pasar Asia Tenggara.</li><li>Peluncuran "KitchenOS API" untuk produsen alat dapur.</li><li class="font-bold text-teal-300">Aktivasi Tata Kelola DAO & Pasar Resep NFT.</li><li>Pengembangan fitur Pro (Pelacakan nutrisi, dll).</li>' data-lang-es='<li>Expansión al Sudeste Asiático y América del Norte.</li><li>Lanzar "KitchenOS API" para fabricantes.</li><li class="font-bold text-teal-300">Activar la Gobernanza de la DAO y el Mercado de NFTs de Recetas.</li><li>Desarrollar funciones Pro.</li>' data-lang-fr="<li>Expansion en Asie du Sud-Est et Amérique du Nord.</li><li>Lancer l'API 'KitchenOS' pour les fabricants.</li><li class='font-bold text-teal-300'>Activer la Gouvernance DAO et le Marché NFT de Recettes.</li><li>Développer des fonctionnalités Pro.</li>" data-lang-de="<li>Expansion nach Südostasien & Nordamerika.</li><li>'KitchenOS API' für Hersteller starten.</li><li class='font-bold text-teal-300'>DAO-Governance & Rezept-NFT-Marktplatz aktivieren.</li><li>Pro-Funktionen entwickeln.</li>">
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Spacer on Desktop -->
                                 <div class="md:w-1/2"></div>
                             </div>
                         </div>
@@ -295,11 +298,11 @@
         <section id="waitlist" class="py-20 bg-gray-800/50">
             <div class="container mx-auto px-6">
                 <div class="bg-gray-800 rounded-2xl p-8 md:p-16 text-center max-w-4xl mx-auto border border-teal-500/30 shadow-2xl">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white">Jangan Ketinggalan Revolusi Dapur</h2>
-                    <p class="text-gray-400 mt-3 mb-8 max-w-2xl mx-auto">Jadilah orang pertama yang mendapatkan akses eksklusif ke KitchenOS. Daftarkan email Anda untuk kesempatan mendapatkan airdrop token $KOS di masa depan.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-lang-en="Don't Miss the Kitchen Revolution" data-lang-id="Jangan Ketinggalan Revolusi Dapur" data-lang-es="No te Pierdas la Revolución de la Cocina" data-lang-fr="Ne Manquez Pas la Révolution de la Cuisine" data-lang-de="Verpassen Sie nicht die Küchenrevolution">Don't Miss the Kitchen Revolution</h2>
+                    <p class="text-gray-400 mt-3 mb-8 max-w-2xl mx-auto" data-lang-en="Be the first to get exclusive access to KitchenOS. Sign up now for a chance to get a future airdrop of $KOS tokens." data-lang-id="Jadilah orang pertama yang mendapatkan akses eksklusif ke KitchenOS. Daftarkan email Anda untuk kesempatan mendapatkan airdrop token $KOS di masa depan." data-lang-es="Sé el primero en obtener acceso exclusivo a KitchenOS. Regístrate ahora para tener la oportunidad de recibir un futuro airdrop de tokens $KOS." data-lang-fr="Soyez le premier à obtenir un accès exclusif à KitchenOS. Inscrivez-vous maintenant pour avoir une chance de recevoir un futur airdrop de jetons $KOS." data-lang-de="Seien Sie der Erste, der exklusiven Zugang zu KitchenOS erhält. Melden Sie sich jetzt an, um die Chance auf einen zukünftigen Airdrop von $KOS-Token zu erhalten.">Be the first to get exclusive access to KitchenOS. Sign up now for a chance to get a future airdrop of $KOS tokens.</p>
                     <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto" onsubmit="handleWaitlistSubmit(event)">
-                        <input type="email" id="emailInput" placeholder="Masukkan alamat email Anda" required class="flex-grow bg-gray-700 text-white placeholder-gray-500 px-5 py-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition w-full">
-                        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-3 rounded-lg transition w-full md:w-auto">Gabung Waitlist & Airdrop</button>
+                        <input type="email" id="emailInput" required class="flex-grow bg-gray-700 text-white placeholder-gray-500 px-5 py-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 focus:outline-none transition w-full" data-lang-en-placeholder="Enter your email address" data-lang-id-placeholder="Masukkan alamat email Anda" data-lang-es-placeholder="Introduce tu correo electrónico" data-lang-fr-placeholder="Entrez votre adresse e-mail" data-lang-de-placeholder="Geben Sie Ihre E-Mail-Adresse ein">
+                        <button type="submit" class="bg-teal-500 hover:bg-teal-600 text-white font-bold px-8 py-3 rounded-lg transition w-full md:w-auto" data-lang-en="Join Waitlist & Airdrop" data-lang-id="Gabung Waitlist & Airdrop" data-lang-es="Unirse y Airdrop" data-lang-fr="Rejoindre et Airdrop" data-lang-de="Beitreten & Airdrop">Join Waitlist & Airdrop</button>
                     </form>
                     <p id="feedbackMessage" class="mt-4 text-green-400 h-5"></p>
                 </div>
@@ -310,32 +313,79 @@
     <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center text-gray-500">
-            <p>&copy; 2025 KitchenOS. Semua Hak Cipta Dilindungi.</p>
-            <p class="mt-2 text-sm">Dibangun dengan ❤️ untuk para juru masak di seluruh dunia.</p>
+            <p data-lang-en="&copy; 2025 KitchenOS. All Rights Reserved." data-lang-id="&copy; 2025 KitchenOS. Semua Hak Cipta Dilindungi." data-lang-es="&copy; 2025 KitchenOS. Todos los Derechos Reservados." data-lang-fr="&copy; 2025 KitchenOS. Tous Droits Réservés." data-lang-de="&copy; 2025 KitchenOS. Alle Rechte vorbehalten.">&copy; 2025 KitchenOS. All Rights Reserved.</p>
+            <p class="mt-2 text-sm" data-lang-en="Built with ❤️ for home cooks around the world." data-lang-id="Dibangun dengan ❤️ untuk para juru masak di seluruh dunia." data-lang-es="Hecho con ❤️ para los cocineros caseros de todo el mundo." data-lang-fr="Construit avec ❤️ pour les cuisiniers du monde entier." data-lang-de="Mit ❤️ für Hobbyköche auf der ganzen Welt gebaut.">Built with ❤️ for home cooks around the world.</p>
         </div>
     </footer>
 
     <script>
-        // JavaScript for mobile menu toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const languageSwitchers = [document.getElementById('language-switcher'), document.getElementById('language-switcher-mobile')];
+            const elementsToTranslate = document.querySelectorAll('[data-lang-en]');
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const translatePage = (lang) => {
+                elementsToTranslate.forEach(el => {
+                    const translation = el.getAttribute(`data-lang-${lang}`);
+
+                    if (el.tagName === 'UL') {
+                        // For lists, we replace the entire list's inner HTML
+                         if (translation) {
+                             el.innerHTML = translation;
+                         }
+                    } else {
+                        // For other elements, we check for direct text content
+                        const text = el.getAttribute(`data-lang-${lang}`);
+                        if (text) {
+                            el.innerHTML = text;
+                        }
+                    }
+
+                    // Handle placeholders
+                    const placeholder = el.getAttribute(`data-lang-${lang}-placeholder`);
+                    if(placeholder) {
+                        el.placeholder = placeholder;
+                    }
+                });
+                document.documentElement.lang = lang;
+            };
+
+            languageSwitchers.forEach(switcher => {
+                switcher.addEventListener('change', (event) => {
+                    const selectedLang = event.target.value;
+                    translatePage(selectedLang);
+                    // Sync both switchers
+                    languageSwitchers.forEach(s => s.value = selectedLang);
+                });
+            });
+            
+            // Initial translation based on default selector value
+            translatePage(languageSwitchers[0].value);
         });
 
-        // JavaScript for waitlist form submission
         function handleWaitlistSubmit(event) {
             event.preventDefault();
             const emailInput = document.getElementById('emailInput');
             const feedbackMessage = document.getElementById('feedbackMessage');
+            const lang = document.documentElement.lang || 'en';
             
             if (emailInput.value) {
-                // In a real application, you would send this to your backend.
-                // For this demo, we'll just show a success message.
                 console.log('Email submitted:', emailInput.value);
                 
-                feedbackMessage.textContent = 'Terima kasih! Anda telah terdaftar dalam waitlist kami.';
+                const successMessages = {
+                    en: 'Thank you! You have been added to our waitlist.',
+                    id: 'Terima kasih! Anda telah terdaftar dalam waitlist kami.',
+                    es: '¡Gracias! Has sido añadido a nuestra lista de espera.',
+                    fr: 'Merci ! Vous avez été ajouté à notre liste d\'attente.',
+                    de: 'Danke! Sie wurden in unsere Warteliste aufgenommen.'
+                };
+                
+                feedbackMessage.textContent = successMessages[lang];
                 emailInput.value = '';
                 
                 setTimeout(() => {
