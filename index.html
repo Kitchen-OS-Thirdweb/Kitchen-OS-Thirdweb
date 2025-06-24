@@ -25,23 +25,6 @@
             filter: blur(100px);
             z-index: 0;
         }
-        /* Styling untuk garis timeline */
-        .timeline-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            top: 1.25rem; /* Posisi awal garis */
-            left: 0.875rem; /* Posisi horizontal garis (setengah dari lebar dot) */
-            bottom: -1rem; /* Jarak ke item berikutnya */
-            width: 2px;
-            background-color: #374151; /* Warna garis abu-abu */
-            z-index: 0;
-        }
-        
-        @media (min-width: 768px) {
-            .timeline-item::before {
-                display: none; /* Sembunyikan garis mobile di desktop */
-            }
-        }
     </style>
 </head>
 <body class="bg-gray-900 text-gray-200">
@@ -193,96 +176,116 @@
                     <p class="text-gray-400 mt-2 max-w-2xl mx-auto">Kami membangunnya secara bertahap, fokus pada nilai dan kualitas di setiap kuartal.</p>
                 </div>
                 
-                <!-- Timeline Container -->
-                <div class="relative max-w-4xl mx-auto">
-                    <!-- Vertical Line for Desktop -->
-                    <div class="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 w-0.5 bg-gray-700 hidden md:block"></div>
+                <div class="relative max-w-5xl mx-auto">
+                    <!-- The connecting line -->
+                    <div class="absolute left-4 md:left-1/2 w-0.5 h-full bg-gray-700 md:-translate-x-1/2"></div>
                     
-                    <!-- Timeline Items -->
-                    <div class="space-y-12 md:space-y-0">
-                        <!-- Phase 1 -->
-                        <div class="relative timeline-item">
-                            <div class="md:flex items-center md:flex-row-reverse">
-                                <div class="md:w-1/2 md:pl-10">
-                                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg">
-                                        <p class="text-teal-400 font-semibold mb-1">FASE 1: FONDASI & VALIDASI (Q3 2025)</p>
-                                        <h3 class="text-xl font-bold text-white mb-3">Membuktikan Masalah & Membangun Audiens</h3>
-                                        <ul class="list-disc list-inside text-gray-400 space-y-1">
-                                            <li>Riset pasar mendalam & wawancara pengguna.</li>
-                                            <li>Pengembangan prototipe & mockup interaktif.</li>
-                                            <li>Peluncuran landing page & pembukaan waitlist.</li>
-                                            <li>Membentuk tim inti (Hustler, Hipster, Hacker).</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="md:w-1/2 md:flex md:justify-end md:pr-10">
-                                    <div class="flex-shrink-0 w-8 h-8 bg-teal-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white font-bold z-10 absolute left-2 -translate-x-1/2 top-2 md:static md:translate-x-0">1</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phase 2 -->
-                        <div class="relative timeline-item">
-                            <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-10">
-                                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg ml-10 md:ml-0">
-                                        <p class="text-teal-400 font-semibold mb-1">FASE 2: PEMBANGUNAN & PELUNCURAN MVP (Q4 2025 - Q1 2026)</p>
-                                        <h3 class="text-xl font-bold text-white mb-3">Dari Ide Menjadi Produk Nyata</h3>
-                                        <ul class="list-disc list-inside text-gray-400 space-y-1">
-                                            <li>Pengembangan MVP fitur inti (Input suara, resep cerdas).</li>
-                                            <li>Kurasi 1.000+ resep awal masakan Indonesia.</li>
-                                            <li>Peluncuran versi Alpha & Beta untuk pengguna waitlist.</li>
-                                            <li>Pengumpulan umpan balik & iterasi cepat.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="md:w-1/2 md:flex md:justify-start md:pl-10">
-                                    <div class="flex-shrink-0 w-8 h-8 bg-teal-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white font-bold z-10 absolute left-2 -translate-x-1/2 top-2 md:static md:translate-x-0">2</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="space-y-16">
                         
-                        <!-- Phase 3 -->
-                        <div class="relative timeline-item">
+                        <!-- Phase 1 Item -->
+                        <div class="relative">
                             <div class="md:flex items-center md:flex-row-reverse">
-                                <div class="md:w-1/2 md:pl-10">
-                                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg">
-                                        <p class="text-teal-400 font-semibold mb-1">FASE 3: PERTUMBUHAN & EKOSISTEM (Q2 2026 - Q4 2026)</p>
-                                        <h3 class="text-xl font-bold text-white mb-3">Monetisasi & Integrasi Web3</h3>
-                                        <ul class="list-disc list-inside text-gray-400 space-y-1">
-                                            <li>Peluncuran publik di Indonesia (Android & iOS).</li>
-                                            <li>Pengembangan fitur Pantry Visual (Scan via AI).</li>
-                                            <li>Inisiasi kemitraan E-Grocery (Model Afiliasi).</li>
-                                            <li class="font-bold text-teal-300">Peluncuran Token $KOS & sistem Cook-to-Earn.</li>
-                                        </ul>
+                                <!-- Card Container -->
+                                <div class="md:w-1/2">
+                                    <div class="relative pl-12 md:pl-0 md:pr-12 md:text-right">
+                                        <!-- Dot -->
+                                        <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2">1</div>
+                                        <!-- Card -->
+                                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
+                                            <p class="text-teal-400 font-semibold mb-1">FASE 1: FONDASI & VALIDASI (Q3 2025)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3">Membuktikan Masalah & Membangun Audiens</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
+                                                <li>Riset pasar mendalam & wawancara pengguna.</li>
+                                                <li>Pengembangan prototipe & mockup interaktif.</li>
+                                                <li>Peluncuran landing page & pembukaan waitlist.</li>
+                                                <li>Membentuk tim inti (Hustler, Hipster, Hacker).</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="md:w-1/2 md:flex md:justify-end md:pr-10">
-                                    <div class="flex-shrink-0 w-8 h-8 bg-teal-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white font-bold z-10 absolute left-2 -translate-x-1/2 top-2 md:static md:translate-x-0">3</div>
-                                </div>
+                                <!-- Spacer on Desktop -->
+                                <div class="md:w-1/2"></div>
                             </div>
                         </div>
 
-                        <!-- Phase 4 -->
-                        <div class="relative timeline-item">
-                             <div class="md:flex items-center">
-                                <div class="md:w-1/2 md:pr-10">
-                                    <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg ml-10 md:ml-0">
-                                        <p class="text-teal-400 font-semibold mb-1">FASE 4: SKALA & DESENTRALISASI (MULAI Q1 2027)</p>
-                                        <h3 class="text-xl font-bold text-white mb-3">Menuju Pasar Global & DAO</h3>
-                                        <ul class="list-disc list-inside text-gray-400 space-y-1">
-                                            <li>Ekspansi ke pasar Asia Tenggara.</li>
-                                            <li>Peluncuran "KitchenOS API" untuk produsen alat dapur.</li>
-                                            <li class="font-bold text-teal-300">Aktivasi Tata Kelola DAO & Pasar Resep NFT.</li>
-                                            <li>Pengembangan fitur Pro (Pelacakan nutrisi, dll).</li>
-                                        </ul>
+                        <!-- Phase 2 Item -->
+                        <div class="relative">
+                            <div class="md:flex items-center">
+                                <!-- Card Container -->
+                                <div class="md:w-1/2">
+                                    <div class="relative pl-12 md:pl-12">
+                                        <!-- Dot -->
+                                        <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2">2</div>
+                                        <!-- Card -->
+                                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
+                                            <p class="text-teal-400 font-semibold mb-1">FASE 2: PEMBANGUNAN & PELUNCURAN MVP (Q4 2025 - Q1 2026)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3">Dari Ide Menjadi Produk Nyata</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
+                                                <li>Pengembangan MVP fitur inti (Input suara, resep cerdas).</li>
+                                                <li>Kurasi 1.000+ resep awal masakan Indonesia.</li>
+                                                <li>Peluncuran versi Alpha & Beta untuk pengguna waitlist.</li>
+                                                <li>Pengumpulan umpan balik & iterasi cepat.</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="md:w-1/2 md:flex md:justify-start md:pl-10">
-                                    <div class="flex-shrink-0 w-8 h-8 bg-teal-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white font-bold z-10 absolute left-2 -translate-x-1/2 top-2 md:static md:translate-x-0">4</div>
-                                </div>
+                                <!-- Spacer on Desktop -->
+                                <div class="md:w-1/2"></div>
                             </div>
                         </div>
+
+                        <!-- Phase 3 Item -->
+                        <div class="relative">
+                            <div class="md:flex items-center md:flex-row-reverse">
+                                <!-- Card Container -->
+                                <div class="md:w-1/2">
+                                    <div class="relative pl-12 md:pl-0 md:pr-12 md:text-right">
+                                        <!-- Dot -->
+                                        <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2 md:left-auto md:right-0 md:translate-x-1/2">3</div>
+                                        <!-- Card -->
+                                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
+                                            <p class="text-teal-400 font-semibold mb-1">FASE 3: PERTUMBUHAN & EKOSISTEM (Q2 2026 - Q4 2026)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3">Monetisasi & Integrasi Web3</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
+                                                <li>Peluncuran publik di Indonesia (Android & iOS).</li>
+                                                <li>Pengembangan fitur Pantry Visual (Scan via AI).</li>
+                                                <li>Inisiasi kemitraan E-Grocery (Model Afiliasi).</li>
+                                                <li class="font-bold text-teal-300">Peluncuran Token $KOS & sistem Cook-to-Earn.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Spacer on Desktop -->
+                                <div class="md:w-1/2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Phase 4 Item -->
+                        <div class="relative">
+                            <div class="md:flex items-center">
+                                <!-- Card Container -->
+                                <div class="md:w-1/2">
+                                    <div class="relative pl-12 md:pl-12">
+                                        <!-- Dot -->
+                                        <div class="absolute top-1 left-4 w-8 h-8 bg-gray-900 rounded-full border-2 border-teal-500 flex items-center justify-center font-bold z-10 -translate-x-1/2">4</div>
+                                        <!-- Card -->
+                                        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg text-left">
+                                            <p class="text-teal-400 font-semibold mb-1">FASE 4: SKALA & DESENTRALISASI (MULAI Q1 2027)</p>
+                                            <h3 class="text-xl font-bold text-white mb-3">Menuju Pasar Global & DAO</h3>
+                                            <ul class="list-disc list-inside text-gray-400 space-y-1 text-left">
+                                                <li>Ekspansi ke pasar Asia Tenggara.</li>
+                                                <li>Peluncuran "KitchenOS API" untuk produsen alat dapur.</li>
+                                                <li class="font-bold text-teal-300">Aktivasi Tata Kelola DAO & Pasar Resep NFT.</li>
+                                                <li>Pengembangan fitur Pro (Pelacakan nutrisi, dll).</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Spacer on Desktop -->
+                                <div class="md:w-1/2"></div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
